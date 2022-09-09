@@ -32,89 +32,235 @@ button {
 }
 
 /* Box-sizing */
-#div2{
-    background-color: orangered;
-    width: 80%;
-    height: 200px;
-    margin-left: 100px;
-    box-sizing: content-box;
-    padding: 50px;
-    /* It takes width and height from overall content */
-    
-
+#div2 {
+  background-color: orangered;
+  width: 80%;
+  height: 200px;
+  margin-left: 100px;
+  box-sizing: content-box;
+  padding: 50px;
+  /* It takes width and height from overall content */
 }
 
-#div3{
-    background-color: yellow;;
-    width: 80%;
-    height: 200px;
-    margin-left: 100px;
-    padding: 50px;
-    box-sizing: content-box;
-    margin-top: 25px;
-    border: 15px solid black;
-    box-sizing: border-box;
-   /* It takes height and width from only border */
-    
+#div3 {
+  background-color: yellow;
+  width: 80%;
+  height: 200px;
+  margin-left: 100px;
+  padding: 50px;
+  box-sizing: content-box;
+  margin-top: 25px;
+  border: 15px solid black;
+  box-sizing: border-box;
+  /* It takes height and width from only border */
 }
 
 /* Float and Clear */
 
-#img2{
-    width: 200px;
-    height: auto;
-    margin-top: 10px;
-    float: right;
-    clear: both;
-    /* Float towards right and clear goes down */
+#img2 {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  float: right;
+  clear: both;
+  /* Float towards right and clear goes down */
 }
 
 /* Animation */
 
-@keyframes changecolor{
-    0%{
-         border-radius: 0%;
-    }
-    10%{
-          border-radius: 10%;
-    }
-    20%{
-        border-radius: 20%;
-    }
-    30%{
-        border-radius: 30%;
-    }
-   40%{
-        border-radius: 40%;
-   }
-
-   50%{
-        border-radius: 50%; 
-   }
-   60%{
-        border-radius: 40%;
-   }
-   70%{
-    border-radius: 30%;
-   }
-   80%{
-    border-radius: 20%;
-   }
-  90%{
-    border-radius: 10%; 
-   }   
-   100%{
+@keyframes changecolor {
+  0% {
     border-radius: 0%;
-   }
+    padding: 15px;
+  }
+  10% {
+    border-radius: 10%;
+  }
+  20% {
+    border-radius: 20%;
+  }
+  30% {
+    border-radius: 30%;
+  }
+  40% {
+    border-radius: 40%;
+  }
 
+  50% {
+    border-radius: 50%;
+  }
+  60% {
+    border-radius: 40%;
+  }
+  70% {
+    border-radius: 30%;
+  }
+  80% {
+    border-radius: 20%;
+  }
+  90% {
+    border-radius: 10%;
+  }
+  100% {
+    border-radius: 0%;
+  }
 }
 
-#div4{
-    background-color: orchid;
-    height: 200px;
-    width: 200px;
-    margin: 100px;
-    animation-name: changecolor;
-    animation-duration: 4s;
-    animation-delay: 4s;
+#div4 {
+  background-color: orchid;
+  height: 200px;
+  width: 200px;
+  margin: 100px;
+  padding: 15px;
+  animation-name: changecolor;
+  animation-duration: 4s;
+  animation-delay: 4s;
+}
+
+/* Pseudo Classes */
+li:first-child {
+  color: indianred;
+} /*For 1st child*/
+
+li:last-child {
+  color: darkblue;
+} /*For last child*/
+
+li:nth-child(3) {
+  color: indigo;
+} /* For some of the child */
+
+li:nth-child(even) {
+  color: green;
+}
+
+input:focus {
+  border: 3px solid red;
+}
+
+/* Pseudo element */
+
+input::placeholder {
+  font-size: 18px;
+  color: red;
+}
+
+#p2::first-letter {
+  color: green;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+h1::before {
+  content: url(./assets/cat.jpg);
+}
+
+#p2::first-line {
+  color: red;
+  font-size: 25px;
+}
+
+/* Display and Visibility */
+#display {
+  display: none;
+  width: 100px;
+  border: 2px solid blue;
+  /* Does not take any space */
+}
+
+#display1 {
+  visibility: hidden;
+  border: 1px solid red;
+  width: 200px;
+  height: 200px;
+}
+/* Takes the space */
+
+#display2 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+/* Opens from next line and takes height and width. */
+
+#display3 {
+  display: inline;
+  border: 2px solid blue;
+}
+
+#display4 {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 2px solid green;
+}
+
+/* Position */
+body {
+  height: 1000px;
+}
+
+#parent1 {
+  border: 1px solid red;
+  width: 50%;
+  padding: 30px;
+  margin: 100px;
+}
+
+#parent2 {
+  border: 1px solid orange;
+  width: 50%;
+  padding: 30px;
+  margin: 100px;
+  position: relative;
+}
+
+#one {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: inline-block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#two {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+#three {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  display: inline-block;
+  position: absolute;
+  top: 2600px;
+  left: 50px;
+}
+#four {
+  width: 100px;
+  height: 100px;
+  background-color: violet;
+  display: inline-block;
+}
+#five {
+  height: 100px;
+  background-color: purple;
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  top: 0;
+  left: 0;
+}
+#six {
+  width: 100px;
+  height: 100px;
+  background-color: indigo;
+  display: inline-block;
 }
