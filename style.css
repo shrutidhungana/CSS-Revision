@@ -1,3 +1,7 @@
+
+
+
+
 /* Opacity */
 #img1 {
   width: 200px;
@@ -151,7 +155,7 @@ input::placeholder {
   font-size: 30px;
 }
 
-h1::before {
+#h1::before {
   content: url(./assets/cat.jpg);
 }
 
@@ -264,3 +268,148 @@ body {
   background-color: indigo;
   display: inline-block;
 }
+/* Flex-Box */
+.flex-container{
+  background-color: #9f00ff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: stretch; 
+  /* flex-wrap: wrap; */
+  align-content: space-evenly;
+}
+
+.flex-child{
+  background-color: orange;
+  margin: 20px;
+  padding: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+#One{
+      order: 4;
+}
+#Two{
+       order: 3;
+}
+#Three{
+        order: 2;
+        flex-basis: 3;
+}
+#Four{
+        order: 1
+}
+#Five{
+        order: 6
+}
+#Six{
+        order: 8;
+}
+#Seven{
+        order: 7;
+}
+#Eight{
+         order: 5
+} 
+
+/* Multiple Column */
+#column{
+  column-count: 4;
+  column-rule: 1px solid orange;
+  column-gap: 40px;
+  column-width: 400px;
+}
+
+#heading{
+  column-span: all;
+}
+
+/* Box-Shadow */
+#shadow{
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
+
+#div6{
+  background-color: purple;
+  border: 3px dashed black;
+  width: 500px;
+  height: 300px;
+  margin: 100px;
+  padding: 25px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 10px 5px gray;
+}
+/* Re-size */
+#overflow{
+  border: 4px solid white;
+  width: 500px;
+  height: 300px;
+  overflow: auto;
+  margin-bottom: 10px;
+  resize: both;
+}
+#overflow1{
+  border: 4px solid white;
+    width: 500px;
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 10px;
+    resize: horizontal;
+}
+#overflow2{
+  order: 4px solid white;
+    width: 500px;
+    height: 300px;
+    overflow: auto;
+    resize: vertical;
+}
+
+#textarea{
+  resize:none
+}
+/* Font */
+
+@font-face{
+  font-family: Allura;
+  src: url("./Fonts/Allura-Regular.ttf")
+}
+
+@font-face{
+  font-family: 'Luckiest Guy';
+  src: url("./Fonts//LuckiestGuy.ttf")
+}
+
+#big{
+  font-weight: bold;
+   font-style: italic;
+   font-family: 'Poppins', sans-serif;
+   
+}
+#p3{
+  font-size: 20px;
+    font-weight: 400;
+    
+     font-variant:small-caps;
+ 
+    font-family: 'Raleway', sans-serif;
+    font-style: oblique;
+}
+#small{
+  font-family: Allura ;
+}
+#smaller{
+  font-family: Allura,'Poppins', sans-serif;
+}
+#smallest{
+  font-family:"Luckiest Guy" ;
+}
+
