@@ -412,4 +412,119 @@ body {
 #smallest{
   font-family:"Luckiest Guy" ;
 }
+/* Print style */
 
+@media print{
+  #p3{
+    background-color: black;
+    color: white;
+  }
+}
+
+@media print{
+  #small{
+    background-color: red;
+    color: white;
+  }
+}
+
+/* Specificity and Important*/
+
+.green{
+  color: green;
+}
+
+#p4{
+  color: yellowgreen
+}
+
+.green #p4{
+  color: yellow;
+}
+
+.blue{
+  color: blue
+}
+
+#p6{
+  color: red !important
+}
+
+#p6{
+  color: purple;
+}
+/* Layers and z-index */
+
+#parent{
+  /* border: 2px solid red; */
+  padding: 20px;
+  width: 50%;
+  margin: 100px;
+  position: relative;
+  
+}
+
+#one{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display:inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+#two{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  display:inline-block;
+  position: relative;
+  top: 50px;
+  left: -50px;
+  z-index: 3;
+}
+
+#three{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  display:inline-block;
+  position: relative;
+  top: 100px;
+  left: -100px;
+  z-index: 1;
+}
+
+/* Gradient */
+#div7{
+  height: 100vh;
+  border: 20px solid orchid;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px 15px 10px ;
+  padding: 10px;
+  background-image: linear-gradient(150deg , #66023c,#ffb347,#7cfc00);
+}
+
+#h21{
+  color: white;
+  background-image: linear-gradient(150deg , #66023c,#ffb347,#7cfc00);;
+}
+
+#div8{
+  height: 100vh;
+  border: 20px solid orchid;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px 15px 10px ;
+  padding: 10px;
+  background-image: radial-gradient(circle,#4b0082 30%,#fe5a1d 50%,#adff2f 20%);
+}
+
+
+#h22{
+  color:white;
+  background-image: radial-gradient(circle,#4b0082,#fe5a1d,#adff2f);
+}
