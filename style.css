@@ -455,7 +455,7 @@ body {
 }
 /* Layers and z-index */
 
-#parent{
+#parent1{
   /* border: 2px solid red; */
   padding: 20px;
   width: 50%;
@@ -464,7 +464,7 @@ body {
   
 }
 
-#one{
+#one1{
   width: 100px;
   height: 100px;
   background-color: green;
@@ -473,7 +473,7 @@ body {
   z-index: 2;
 }
 
-#two{
+#two1{
   width: 100px;
   height: 100px;
   background-color: blue;
@@ -484,7 +484,7 @@ body {
   z-index: 3;
 }
 
-#three{
+#three1{
   width: 100px;
   height: 100px;
   background-color: black;
@@ -527,4 +527,311 @@ body {
 #h22{
   color:white;
   background-image: radial-gradient(circle,#4b0082,#fe5a1d,#adff2f);
+}
+
+/* Object-Fit */
+
+#img4{
+  border: 1px solid red;
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+    object-position: top center
+}
+
+#img5{
+  width: 500px;
+  height: 400px;
+  border: 1px solid blue;
+    object-fit:fill;
+}
+
+#img6{
+  border: 1px solid green;
+  width: 500px;
+  height: 400px;
+  object-fit:cover;
+}
+/* Advanced Selector */
+
+a[href = "https://www.facebook.com"]{
+  color: green;
+}
+
+#div9>#h4{
+  color: lime;
+}
+
+#h4+#p7{
+  color: orchid;
+}
+/* Initial vs Inherit */
+
+#green{
+  font-size: 16px;
+color: green;
+}
+
+#blue{
+  color: red;
+}
+
+#initial{
+  color: initial;
+}
+
+#inherit{
+  color: inherit;
+}
+/* 2D Transformation */
+#wrapper{
+  padding: 20px;
+  margin: 20px'
+}
+
+#a1{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white;
+  margin: 25px;
+  transform: translate(50px,50px);
+  display: inline-block
+
+
+}
+
+#container{
+  
+      padding: 25px;
+      margin: 25px;
+   
+}
+
+#a2{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white;
+  margin-bottom: 25px;
+  
+}
+
+#a2:hover{
+  transform: translate(50px,50px);
+
+  display: inline-block 
+}
+
+#container1{
+  padding: 30px;
+  margin: 30px;
+
+}
+
+#a3{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px; 
+  color: white; 
+}
+
+#a3:hover{
+  transform: rotate(20deg);
+
+  display: inline-block 
+}
+
+#container2{
+  padding: 35px;
+  margin: 35px;
+
+}
+
+#a4{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white; 
+}
+
+#a4:hover{
+  transform: scale(2,3);
+  
+  display: inline-block 
+}
+
+#container3{
+  padding: 40px;
+  margin: 40px;
+
+}
+
+#a5{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white; 
+  transform: skew(20deg,10deg);
+
+  display:inline-block;
+}
+
+#container4{
+  padding: 45px;
+  margin: 45px;
+
+}
+
+#a6{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white;
+  display: inline-block;
+  transform:rotate(20deg) ;
+  transform-origin: 0% 100%;
+ 
+}
+
+#container5{
+  padding: 20px;
+  margin: 100px;
+   background-color: yellow;
+  transform:matrix(1,-0.2,0,1,0,0 )
+}
+
+
+
+#a7{
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 10px 20px;
+  color: white;
+  display: inline-block;
+}
+/* 3D Transformation */
+#cover{
+  border: 3px solid red;
+  height: 200px;
+  width: 200px;
+  margin: 150px;
+}
+
+#content{
+  height: 200px;
+  width: 200px;
+  background-image: linear-gradient(60deg,#ffa07a,#ffae42,#4b0082);
+  transform: perspective(300px) rotate3d(50,50,50,20deg)
+
+}
+
+#cover1{
+  border: 3px solid red;
+  height: 200px;
+  width: 200px;
+  margin: 150px;
+}
+
+#content1{
+  height: 200px;
+  width: 200px;
+  background-image: linear-gradient(60deg,#ffa07a,#ffae42,#4b0082);
+  transform: perspective(300px) translate3d(50px,50px,50px)
+
+}
+/* Transition */
+#div10{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: 100px;
+  cursor: pointer;
+  transition-property: width,height,background-color;
+  /* The property for what to transition */
+  transition-duration: 2s;
+  /* How many time it takes to transition */
+  transition-delay: 5s;
+  /* The time to wait */
+  transition-timing-function: ease-in-out;
+}
+
+
+#div10:hover{
+  width: 200px;
+  height: 200px;
+  cursor:pointer;
+  background-color: greenyellow;
+
+}
+
+#div11{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin: 100px;
+  cursor: pointer;
+  transition: width 5s, height 3s
+}
+
+#div11:hover{
+  width: 400px;
+  height: 400px;
+  cursor:pointer;
+  background-color: indianred;
+}
+
+/* List */
+
+ul{
+  list-style-type: square;
+   list-style-position: inside; 
+}
+
+ol{
+   list-style-type:lower-alpha; 
+  
+   
+}
+
+
+li{
+ border: 2px solid black;
+}
+/* Image Sprites */
+#sprite{
+  height: 250px;
+  background-image: url('assets/combine_images.jpg');
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+  width: 200px;
+  
+}
+
+#sprite1{
+  height: 200px;
+  background-image: url('assets/combine_images.jpg');
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+  width: 290px;
+  background-position:  -320px 0px ;
+  
+}
+
+#sprite2{
+  height: 200px;
+  background-image: url('assets/combine_images.jpg');
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+  width: 600px;
+  background-position:  -615px 0px ;
+ 
+}
+/* Filter */
+#img7{
+  height: 500px;
+  margin-top: 25px;
+  margin-left: 150px;
+   filter:blur(10px) 
+  
 }
